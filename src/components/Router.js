@@ -5,7 +5,7 @@ import Auth from '../routes/Auth';
 import Home from '../routes/Home';
 import Navigation from './Navigation';
 
-const AppRouter = ({isLoggedIn}) => 
+const AppRouter = ({isLoggedIn, userObj}) => 
 {
   // 원래는 router 안에 switch 형식이었지만 hooks component를 사용하여 로그인 여부로 구분한다.
   console.log("isLoggedIn : ",isLoggedIn)
@@ -15,7 +15,7 @@ const AppRouter = ({isLoggedIn}) =>
       <Routes>
         {isLoggedIn?
         (<>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home userObj={userObj}/>} />
           <Route path="/profile" element={<Profile />} />
         </>) :
         (<>

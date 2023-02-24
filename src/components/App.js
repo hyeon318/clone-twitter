@@ -32,7 +32,7 @@ function App() {
         init ? <AppRouter isLoggedIn={isLoggedIn} userObj={userObj}/> : "Initialized"
       }
       {/* 따로 쓰는 이유 footer 를 추가할 수도있음 */}
-      <footer>&copy; {new Date().getFullYear()} Nwitter</footer>
+      {/* <footer>&copy; {new Date().getFullYear()} Nwitter</footer> */}
     </>
   );
 }

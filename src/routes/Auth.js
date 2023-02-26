@@ -2,11 +2,14 @@ import AuthForm from 'components/AuthForm';
 import { authService } from 'fbase';
 import { createUserWithEmailAndPassword, GithubAuthProvider, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTwitter,
+  faGoogle,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Auth = () =>{
-
-
-
   const onSocialClick = async (event) => {
     const {target:{name}} = event;
     let provider;
@@ -21,14 +24,20 @@ const Auth = () =>{
   }
 
   return (
-    <>
-    <AuthForm />
+    <div className="authContainer">
       <div>
-        <div>
-          <button name="google" onClick={onSocialClick}>Continum With Google</button>
-          <button name="github" onClick={onSocialClick}>Continum With GitHub</button>
-        </div>
+        <FontAwesomeIcon
+          icon={faTwitter}
+          color={"#04AAFF"}
+          size="3x"
+          style={{ marginBottom: 30 }}
+        />
       </div>
-    </>
+      <AuthForm />
+      <div className="authBtns">
+        <button name="google" className="authBtn" onClick={onSocialClick}>Continum With Google<FontAwesomeIcon icon={faGoogle} /> </button>
+        <button name="github" className="authBtn" onClick={onSocialClick}>Continum With GitHub<FontAwesomeIcon icon={faGithub} /></button>
+      </div>
+    </div>
 )}
 export default Auth

@@ -1,4 +1,24 @@
+.container {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+.contour{
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 14px;
+  padding-top:5px;
+}
 
+.hr{
+  width:130px;
+  height:1px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
 /* Auth */
 
 .authContainer {
@@ -10,19 +30,22 @@
 }
 .authBtns {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  /* justify-content: space-between; */
   width: 100%;
   max-width: 320px;
 }
 
 .authBtn {
   cursor: pointer;
+  max-width: 320px;
+  margin-top: 10px;
+  width: 100%;
   border-radius: 20px;
-  border: none;
+  border:1px solid rgba(0, 0, 0, 0.2);
   padding: 10px 0px;
-  font-size: 12px;
+  font-size: 1em;
   text-align: center;
-  width: 150px;
   background: white;
   cursor: pointer;
 }
@@ -53,7 +76,7 @@
   color: tomato;
   text-align: center;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 1em;
 }
 
 .authSwitch {
@@ -62,6 +85,6 @@
   margin-top: 10px;
   margin-bottom: 50px;
   display: block;
-  font-size: 12px;
+  font-size: 1em;
   text-decoration: underline;
 }

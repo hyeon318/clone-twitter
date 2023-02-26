@@ -33,11 +33,16 @@ const Auth = () =>{
           style={{ marginBottom: 30 }}
         />
       </div>
-      <AuthForm />
       <div className="authBtns">
-        <button name="google" className="authBtn" onClick={onSocialClick}>Continum With Google<FontAwesomeIcon icon={faGoogle} /> </button>
-        <button name="github" className="authBtn" onClick={onSocialClick}>Continum With GitHub<FontAwesomeIcon icon={faGithub} /></button>
+        <button name="google" className="authBtn" onClick={onSocialClick}>Google 계정으로 가입하기  <FontAwesomeIcon icon={faGoogle} /> </button>
+        <button name="github" className="authBtn" onClick={onSocialClick}>Github 계정으로 가입하기 <FontAwesomeIcon icon={faGithub} /></button>
       </div>
+      <div className="contour">
+        <div className="hr"></div>
+        또는
+        <div className="hr"></div>
+      </div>
+      <AuthForm />
     </div>
 )}
 export default Auth

@@ -32,6 +32,8 @@ const Auth = () =>{
           size="3x"
           style={{ marginBottom: 30 }}
         />
+        <span className="">지금 일어나고 있는 일</span>      
+        <span className="h4">오늘 트위터에 가입하세요.</span>      
       </div>
       <div className="authBtns">
         <button name="google" className="authBtn" onClick={onSocialClick}>Google 계정으로 가입하기  <FontAwesomeIcon icon={faGoogle} /> </button>

@@ -24,27 +24,38 @@ const Auth = () =>{
   }
 
   return (
-    <div className="authContainer">
-      <div>
-        <FontAwesomeIcon
-          icon={faTwitter}
-          color={"#04AAFF"}
-          size="3x"
-          style={{ marginBottom: 30 }}
-        />
-        <span className="">지금 일어나고 있는 일</span>      
-        <span className="h4">오늘 트위터에 가입하세요.</span>      
+    <div>
+      <div className="container">
+        <div className="picContainer">
+          <FontAwesomeIcon
+              icon={faTwitter}
+              color={"#FFFFFF"}
+              size="10x"
+            />
+        </div>
+        <div className="authContainer">
+          <div>
+            <FontAwesomeIcon
+              icon={faTwitter}
+              color={"#04AAFF"}
+              size="3x"
+              style={{ marginBottom: 30 }}
+            />
+            <span className="ft ft6">지금 일어나고 있는 일</span>      
+            <span className="ft ft3">오늘 트위터에 가입하세요.</span>      
+          </div>
+          <div className="authBtns">
+            <button name="google" className="authBtn" onClick={onSocialClick}>Google 계정으로 가입하기  <FontAwesomeIcon icon={faGoogle} /> </button>
+            <button name="github" className="authBtn" onClick={onSocialClick}>Github 계정으로 가입하기 <FontAwesomeIcon icon={faGithub} /></button>
+          </div>
+          <div className="contour">
+            <div className="hr"></div>
+            또는
+            <div className="hr"></div>
+          </div>
+          <AuthForm />
+        </div>
       </div>
-      <div className="authBtns">
-        <button name="google" className="authBtn" onClick={onSocialClick}>Google 계정으로 가입하기  <FontAwesomeIcon icon={faGoogle} /> </button>
-        <button name="github" className="authBtn" onClick={onSocialClick}>Github 계정으로 가입하기 <FontAwesomeIcon icon={faGithub} /></button>
-      </div>
-      <div className="contour">
-        <div className="hr"></div>
-        또는
-        <div className="hr"></div>
-      </div>
-      <AuthForm />
     </div>
 )}
 export default Auth

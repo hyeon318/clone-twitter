@@ -46,7 +46,7 @@ const AuthForm = () => {
 
   return (
     <>
-      <form onSubmit={onSubmit} className="container">
+      <form onSubmit={onSubmit} className="container1">
         {/* <input type="email" name="email" placeholder='Email' required value={email} onChange={onChange} className="authInput"/>
         <input type="password" name="password" placeholder='Password' required value={password} onChange={onChange} className="authInput"/> */}
         
